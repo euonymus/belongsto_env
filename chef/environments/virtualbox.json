@@ -1,0 +1,8 @@
+{
+  "name": "virtualbox",
+  "description":"This is virtualbox environment",
+  "chef_type": "environment",
+  "json_class": "Chef::Environment",
+  "default_attributes": {},
+  "override_attributes": {}
+}
