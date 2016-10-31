@@ -4,3 +4,6 @@
 [submodule "src/cakephp"]
 	path = src/cakephp
 	url = git@github.com:euonymus/belongsto.git
+[submodule "src/secrets"]
+	path = src/secrets
+	url = git@bitbucket.org:euonymus/belongsto_secret.git
