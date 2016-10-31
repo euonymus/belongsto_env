@@ -1,14 +1,26 @@
 {
   "id": "mysql",
   "development": {
-    "encrypted_data": "i6aLFvkDdWrEVCtGkli4lI4eAiClByZYnOHKpc7dat0ea1rmMSWGndG3E3jL\nkou3u3m5p2zMpBxHERasRlVd3g5khd4RM5DScT2rq6yZBIAxK+76zZZ8mIho\ny0jDQ9vxtPveOt6d8KvoCVYjd5Y7HxUNcaTSf4ZvTrtXN71rUeVM84zvn1fN\nLB0pUBpSBfQHBgpZ1QIgYnj3IaqssJBcrQ==\n",
-    "iv": "cQSeB89kvkAjf80ezFNBgQ==\n",
+    "encrypted_data": "9z8DPYpZpl0+x2U/qY2wnukHaOEFcCHSlrwwZkhgEvLN93aWumTD2Ymm4R5l\nxJ+m2y75D8mzRoHbVbqb3FspptkQ15GlLK6bKsO9hMNr/sb3ogriWndzOWeX\nXGy/q8Q8iqxni17QBPPZGN/N3T3USIV4vjJdnvwah6tptaY9s5KBxRI+HWje\n3XDwMj80CnRxIt1TZ2hUe8Lbn5+RxdetHA==\n",
+    "iv": "s5uWxkw07yYcQFF1P3ivWg==\n",
     "version": 1,
     "cipher": "aes-256-cbc"
   },
   "production": {
-    "encrypted_data": "R0CPNrkp90dDA7snKnaaC4xQrOyPOoeIt3ZzUB65lGgfIlEVrzEI2xznyLYA\nKUdubo37XVbQPvwpJ4zX7iry8toYoGlPQsY4UZ/dhoLrKTiG/hBvZ57/YR1b\n8YrDaIYUZIZ+9Hf2pLvD1/UGQN+mmn7Y9smHGZFKq+Ywfpm5crbYlm/Tddbr\ngTwhwxlADiAJn+K6puKYsqjA6DOyJG2g1Q==\n",
-    "iv": "IL6MZAnBI5xIkZbjPmk/6A==\n",
+    "encrypted_data": "S542xq5PVVpg2Kh8T9fvk7j2SbVjjMt0/+bIoi/IPRyN12o3mC8XvIfaH0w5\ndAwcuSeSoXQOWDpUgHQePi94ttdY+65ewMJ9ZowLnqFvBEAEiP+dYcv6gmt6\n11nYDUH30Ps3IfPJLnUuBkXe/2sOleULWmeSUNHgIF9gDTp0Jlq9lB0hsBTW\n1mp4AOt/YR15ftjVxIA2nrzTH38gysb97Q==\n",
+    "iv": "VScIqYfiXQI3pZs8Pl3MBg==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "personal": {
+    "encrypted_data": "aU5hHI8XXF4Bqd3EdMlCunp6pPJ2tlMx3EtrX3qDcmEW/iop3JRynpzppHQD\nkQTElveKqdE8qfDNgUSNsUDqfu3bp7QfZcCt+JEn2OAAwRmikmwI+5A7h5a9\ng2SqQ2bz6ftdb4R6hZR2ckS6oYbvAdr546FlyuWvYHvhEKe9MnXejm1bYKdk\noqEdWQMUp/qGFWfn7MwiAHuv5ZMZqEU0NA==\n",
+    "iv": "G26LN489ZYnI3SiaE5WuPA==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "virtualbox": {
+    "encrypted_data": "2nr8wI77+yTSCMZcMHIub5YafHIHSTBZdpizm7q6TQ9stjcECpBBBc9cYlMx\n032A9+PDvHO6BMHxJXykxTLXe/7X8fvdhxxktcTwmSFc89Y2SnZCQ5Sg+xQy\n+xXv4gy9vdgT2XdPaem9jqabY6aGcwAmDdNaxbs6IZhtzRjbV5fWud5h9FgG\nABGeIAEoAx7Q6Y8qhzH8v0x9pFb67tl9Eg==\n",
+    "iv": "NfXIKQjHVEkrRrNsUnOadQ==\n",
     "version": 1,
     "cipher": "aes-256-cbc"
   }
