@@ -6,13 +6,14 @@ end
 
 mysql_service node[:belongsto][:app_name] do
   port '3306'
-  version '5.5'
+  version '5.6'
   initial_root_password node[:belongsto][:db_password_root]
   action [:create, :start]
 end
 
 # Since database cookbook(4.0.7) requires manual install for mysql2_chef_gem
 mysql2_chef_gem 'default' do
+  client_version '5.6'
   action :install
 end
 
