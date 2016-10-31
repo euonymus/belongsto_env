@@ -12,4 +12,3 @@ if node.chef_environment != 'virtualbox'
     to node[:belongsto][:cake_source]
   end
 end
-
