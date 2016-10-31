@@ -36,14 +36,6 @@ if data_bag_secret && mysql_passwords = mysql_creds[node.chef_environment]
   default[:belongsto][:db_password] = mysql_passwords['app']
 end
 
-# Set basic auth info from data_bag
-basic_auth_creds = Chef::EncryptedDataBagItem.load("passwords", "basicauth", data_bag_secret)
-if data_bag_secret && validuser = basic_auth_creds['validuser']
-  default[:belongsto][:validuser] = validuser
-end
-if data_bag_secret && encoded_password = basic_auth_creds['encodedpassword']
-  default[:belongsto][:encodedpassword] = encoded_password
-end
 
 # php.ini
 # MEMO: I tried to change the version of php, but failed, so I just commented out
