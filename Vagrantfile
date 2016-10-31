@@ -10,6 +10,8 @@ Vagrant.configure("2") do |config|
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
 
+  load 'src/digitalocean/digitalocean_token.rb'
+
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "ubuntu14_04_x64"
@@ -60,6 +62,39 @@ Vagrant.configure("2") do |config|
   #
   # View the documentation for the provider you are using for more
   # information on available options.
+
+  config.vm.provision "chef_solo" do |chef|
+    #chef.cookbooks_path = "chef/cookbooks/"
+    chef.cookbooks_path = ["chef/cookbooks", "chef/site-cookbooks"]
+    # chef.nodes_path = "chef/nodes"
+    chef.data_bags_path = "chef/data_bags"
+    chef.environment = CHEF_ENVIRONMENT
+    chef.environments_path = "chef/environments"
+    chef.run_list = %w[
+      recipe[apt]
+      recipe[git]
+      recipe[vim]
+      recipe[apache2]
+      recipe[apache2::mod_auth_basic]
+      recipe[apache2::mod_php5]
+      recipe[apache2::mod_rewrite]
+      recipe[apache2::mod_deflate]
+      recipe[apache2::mod_headers]
+      recipe[apache2::mod_ssl]
+      recipe[apache2::mod_vhost_alias]
+      recipe[postfix]
+    ]
+      # recipe[iptables]
+
+    # Put iptables to the above, if you want to
+    # recipe[iptables]
+  end
+  # config.omnibus.chef_version = :latest
+  # Chef's latest version, 12.11.18 has a bug with vagrant
+  config.omnibus.chef_version = "12.10.24"
+
+
+
 
   # Define a Vagrant Push strategy for pushing to Atlas. Other push strategies
   # such as FTP and Heroku are also available. See the documentation at
