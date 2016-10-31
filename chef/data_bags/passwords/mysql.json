@@ -1,0 +1,15 @@
+{
+  "id": "mysql",
+  "development": {
+    "encrypted_data": "i6aLFvkDdWrEVCtGkli4lI4eAiClByZYnOHKpc7dat0ea1rmMSWGndG3E3jL\nkou3u3m5p2zMpBxHERasRlVd3g5khd4RM5DScT2rq6yZBIAxK+76zZZ8mIho\ny0jDQ9vxtPveOt6d8KvoCVYjd5Y7HxUNcaTSf4ZvTrtXN71rUeVM84zvn1fN\nLB0pUBpSBfQHBgpZ1QIgYnj3IaqssJBcrQ==\n",
+    "iv": "cQSeB89kvkAjf80ezFNBgQ==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "production": {
+    "encrypted_data": "R0CPNrkp90dDA7snKnaaC4xQrOyPOoeIt3ZzUB65lGgfIlEVrzEI2xznyLYA\nKUdubo37XVbQPvwpJ4zX7iry8toYoGlPQsY4UZ/dhoLrKTiG/hBvZ57/YR1b\n8YrDaIYUZIZ+9Hf2pLvD1/UGQN+mmn7Y9smHGZFKq+Ywfpm5crbYlm/Tddbr\ngTwhwxlADiAJn+K6puKYsqjA6DOyJG2g1Q==\n",
+    "iv": "IL6MZAnBI5xIkZbjPmk/6A==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}
