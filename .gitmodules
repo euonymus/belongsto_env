@@ -1,6 +1,6 @@
 [submodule "src/hosts"]
 	path = src/hosts
-	url = git@github.com:euonymus/belongsto_hosts.git
+	url = git@bitbucket.org:euonymus/belongsto_hosts.git
 [submodule "src/cakephp"]
 	path = src/cakephp
 	url = git@github.com:euonymus/belongsto.git
