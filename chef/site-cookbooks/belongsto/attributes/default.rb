@@ -1,10 +1,10 @@
 default[:belongsto][:app_name]     = 'cakephp'
 
-default[:belongsto][:server_name][:production]  = 'belongsto.com'
-default[:belongsto][:server_name][:development] = 'dev.belongsto.com'
-default[:belongsto][:server_name][:personal] = 'personal.belongsto.com'
-default[:belongsto][:server_name][:virtualbox] = 'virtualbox.belongsto.com'
-default[:belongsto][:server_name]  = default[:belongsto][:server_name][node.chef_environment]
+default[:belongsto][:production]   = 'belongsto.com'
+default[:belongsto][:development]  = 'dev.belongsto.com'
+default[:belongsto][:personal]     = 'personal.belongsto.com'
+default[:belongsto][:virtualbox]   = 'virtualbox.belongsto.com'
+default[:belongsto][:server_name]  = default[:belongsto][node.chef_environment]
 
 default[:belongsto][:www_root]     = "/var/www"
 default[:belongsto][:cache_root]   = "/var/cache"

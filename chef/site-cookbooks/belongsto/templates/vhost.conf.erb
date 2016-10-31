@@ -8,6 +8,8 @@ ServerName <%= @params[:server_name] %>
   <Directory <%= @params[:docroot] %>>
     Options FollowSymLinks
     AllowOverride All
+    Order allow,deny
+    Allow from all
   </Directory>
 
   <Location />
@@ -17,10 +19,6 @@ ServerName <%= @params[:server_name] %>
     Require ip 192.168.33.1
 <% end %>
   </Location>
-
-  <LocationMatch /(webroot|css|img|js|feed/(autotweet_tw|autotweet_at|autofbpost|mediagene)|users/login)>
-    Require all granted
-  </LocationMatch>
 
   LogLevel info
   ErrorLog <%= @node[:apache][:log_dir] %>/<%= @params[:name] %>-error.log
