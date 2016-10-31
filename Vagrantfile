@@ -10,7 +10,7 @@ Vagrant.configure("2") do |config|
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
 
-  load 'src/digitalocean/digitalocean_token.rb'
+  load 'src/hosts/host_settings.rb'
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
