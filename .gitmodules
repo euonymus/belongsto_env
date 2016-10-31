@@ -1,0 +1,3 @@
+[submodule "src/hosts"]
+	path = src/hosts
+	url = git@github.com:euonymus/belongsto_hosts.git
