@@ -25,6 +25,6 @@ end
 include_recipe 'belongsto::server'
 include_recipe 'belongsto::apache'
 include_recipe 'belongsto::mysql'
-# include_recipe 'belongsto::php'
+include_recipe 'belongsto::php'
 # include_recipe 'belongsto::cakephp'
 # include_recipe 'belongsto::shell'
