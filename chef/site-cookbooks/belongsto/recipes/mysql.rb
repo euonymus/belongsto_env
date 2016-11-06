@@ -67,3 +67,21 @@ end
 execute "set timezone info into mysql database" do
   command "mysql_tzinfo_to_sql /usr/share/zoneinfo/ | mysql -S /var/run/mysql-" + node[:belongsto][:app_name] + "/mysqld.sock -p" + node[:belongsto][:db_password_root] + " mysql"
 end
+
+
+# build mysite.cnf for mysql config
+template '/etc/mysql-' + node[:belongsto][:app_name] + '/conf.d/mysite.cnf' do
+  owner 'mysql'
+  owner 'mysql'
+  source 'mysite.cnf.erb'
+  notifies :restart, 'mysql_service[' + node[:belongsto][:app_name] + ']'
+end
+
+# restart mysql
+execute "stop_mysql" do
+  command "sudo service mysql-" + node[:belongsto][:app_name] + " stop"
+end
+execute "start_mysql" do
+  command "sudo service mysql-" + node[:belongsto][:app_name] + " start"
+end
+
