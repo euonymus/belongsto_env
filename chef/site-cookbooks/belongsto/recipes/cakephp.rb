@@ -53,10 +53,22 @@ directory node[:belongsto][:cake_source] + '/logs' do
 end
 
 
+# Build app.php files
+template node[:belongsto][:cake_source] + '/config/app.php' do
+  source 'app.php.erb'
+  owner "www-data"
+  group "www-data"
+  mode "755"
+  variables({
+     :login         => node[:belongsto][:db_user],
+     :database      => node[:belongsto][:db_name],
+     :password      => node[:belongsto][:db_password],
+  })
+end
 
 # Database Table creation
 execute "create_tables" do
-  command 'cd ' + node[:belongsto][:cake_source] + " && bin/cake migrations migrate -c " + node.chef_environment
+  command 'cd ' + node[:belongsto][:cake_source] + " && bin/cake migrations migrate"
 end
 
 
