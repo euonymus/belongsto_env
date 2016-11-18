@@ -71,5 +71,10 @@ execute "create_tables" do
   command 'cd ' + node[:belongsto][:cake_source] + " && bin/cake migrations migrate"
 end
 
+# Change setting for text field by alter table
+execute "init_subject_search" do
+  command "mysql -S /var/run/mysql-" + node[:belongsto][:app_name] + "/mysqld.sock -u" + node[:belongsto][:db_user] + " -p" + node[:belongsto][:db_password] + " " + node[:belongsto][:db_name] + " -e'ALTER TABLE `subject_searches` MODIFY `search_words` TEXT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci` NOT NULL;'"
+end
+
 
 # cron
