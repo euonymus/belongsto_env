@@ -55,7 +55,9 @@ end
 
 
 # Database Table creation
-
+execute "create_tables" do
+  command 'cd ' + node[:belongsto][:cake_source] + " && bin/cake migrations migrate -c " + node.chef_environment
+end
 
 
 # cron
