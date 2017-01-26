@@ -1,0 +1,27 @@
+{
+  "id": "mskey",
+  "development": {
+    "encrypted_data": "ORwSX3JVtKnPyEEhB73T9qDZYihfCYcOhqI6EBk/Bvhad2dvaaGDBKzwNfBe\nmeoRaU2Dxj7RQR0OhrhCUvUbEQ==\n",
+    "iv": "1vgaYt0v7v6MCA5vXKKXLg==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "personal": {
+    "encrypted_data": "s+JskiUpNrWsxDx+I5COJwEA/Zbkgm8jrh88eG2wRjObkXh0ifV3BAyWQLeW\nzMb9BiwkyjKm8QjPI6GUXOw+5g==\n",
+    "iv": "shkW/TvjQLY1sC/09bEfIQ==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "virtualbox": {
+    "encrypted_data": "xE4RyIPBCBIED8ybAqm0oW4nPhqCz54rpbZtxYAXxnnlwpXRpKII+r/+xsx6\ncSGDbvolTOprbiLSLQ/tkPZX8g==\n",
+    "iv": "ZxPGz4UVn60pNph6XSZdtA==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "production": {
+    "encrypted_data": "zzrS2UroV/dDmEB2w5tbtBXqoSougO58Q4LgnCP8DSfdDuc8hk4pjoLjtVt4\nj2bhX7Kh/Pftl48iRzEXaO/wVA==\n",
+    "iv": "AqlOEtljDBSE01Fg+TEPfw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}
