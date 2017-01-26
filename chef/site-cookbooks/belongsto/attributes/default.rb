@@ -37,6 +37,14 @@ if data_bag_secret && mysql_passwords = mysql_creds[node.chef_environment]
 end
 
 
+
+# Set MS_KEY from data_bag
+mskey_creds = Chef::EncryptedDataBagItem.load("passwords", "mskey", data_bag_secret)
+if data_bag_secret && mskey = mskey_creds[node.chef_environment]
+  default[:belongsto][:mskey] = mskey['mskey']
+end
+
+
 # php.ini
 # MEMO: I tried to change the version of php, but failed, so I just commented out
 # default['php']['version'] = '5.5.24'

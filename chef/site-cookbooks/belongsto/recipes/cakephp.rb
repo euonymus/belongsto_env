@@ -66,6 +66,19 @@ template node[:belongsto][:cake_source] + '/config/app.php' do
   })
 end
 
+
+# Build secrets.php files
+template node[:belongsto][:cake_source] + '/config/secrets.php' do
+  source 'secrets.php.erb'
+  owner "www-data"
+  group "www-data"
+  mode "755"
+  variables({
+     :mskey      => node[:belongsto][:mskey],
+  })
+end
+
+
 # Database Table creation
 execute "create_tables" do
   command 'cd ' + node[:belongsto][:cake_source] + " && bin/cake migrations migrate"
