@@ -27,6 +27,7 @@ Vagrant.configure("2") do |config|
     ovr.ssh.private_key_path = PRIVATE_KEY_PATH
     ovr.vm.box = "digital_ocean"
     ovr.vm.box_url = "https://github.com/smdahlen/vagrant-digitalocean/raw/master/box/digital_ocean.box"
+    ovr.nfs.functional = false
     ovr.vm.hostname = HOSTNAME
 
     vb.token = TOKEN
