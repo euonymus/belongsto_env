@@ -1,9 +1,6 @@
-cookbook_path    ["cookbooks", "site-cookbooks"]
-node_path        "nodes"
-role_path        "roles"
-environment_path "environments"
-data_bag_path    "data_bags"
-#encrypted_data_bag_secret "data_bag_key"
-
-knife[:berkshelf_path] = "cookbooks"
-Chef::Config[:ssl_verify_mode] = :verify_peer if defined? ::Chef
+node_name                'euonymus'
+client_key               '/Users/euonymus/Sites/belongsto/digital_ocean2/chef/.chef/euonymus.pem'
+validation_client_name   'chef-validator'
+validation_key           '/etc/chef-server/chef-validator.pem'
+chef_server_url          'https://euonymus-no-MacBook-Pro.local/organizations/myorg'
+syntax_check_cache_path  '/Users/euonymus/Sites/belongsto/digital_ocean2/chef/.chef/syntax_check_cache'

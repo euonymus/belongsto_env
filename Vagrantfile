@@ -93,7 +93,7 @@ Vagrant.configure("2") do |config|
       recipe[vim]
       recipe[apache2]
       recipe[apache2::mod_auth_basic]
-      recipe[apache2::mod_php5]
+      recipe[apache2::mod_php]
       recipe[apache2::mod_rewrite]
       recipe[apache2::mod_deflate]
       recipe[apache2::mod_headers]
