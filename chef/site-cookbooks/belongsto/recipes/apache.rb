@@ -12,7 +12,7 @@ file "#{node['apache']['dir']}/mods-available/php7.1.load" do
 end
 apache_conf 'php7' do
   cookbook 'apache2'
-  source 'mods/php.conf.erb'
+  source 'default/mods/php.conf.erb'
 end
 apache_module 'php7' do
   conf false
