@@ -32,7 +32,7 @@ Vagrant.configure("2") do |config|
 
     vb.token = TOKEN
     vb.ssh_key_name = SSH_KEYNAME
-    vb.image = 'ubuntu-14-04-x64'
+    vb.image = 'ubuntu-16-04-x64'
     vb.region = 'sgp1'
     vb.size = '512MB'
   end

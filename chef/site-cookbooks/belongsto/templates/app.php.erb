@@ -92,6 +92,38 @@ return [
             'url' => env('CACHE_DEFAULT_URL', null),
         ],
 
+	'flash' => [
+		    'className' => 'File',
+		    'duration' => '+1 minutes',
+		    'path' => CACHE,
+		    'prefix' => 'cake_flash_'
+		    ],
+	'halfhour' => [
+		    'className' => 'File',
+		    'duration' => '+30 minutes',
+		    'path' => CACHE,
+		    'prefix' => 'cake_halfhour_'
+		    ],
+	'short' => [
+		    'className' => 'File',
+		    'duration' => '+1 hours',
+		    'path' => CACHE,
+		    'prefix' => 'cake_short_'
+		    ],
+	'day' => [
+		    'className' => 'File',
+		    'duration' => '+24 hours',
+		    'path' => CACHE,
+		    'prefix' => 'cake_day_'
+		    ],
+	// Using a fully namespaced name.
+	'long' => [
+		   'className' => 'Cake\Cache\Engine\FileEngine',
+		   'duration' => '+1 week',
+		   'probability' => 100,
+		   'path' => CACHE . 'long' . DS,
+		   ],
+
         /**
          * Configure the cache used for general framework caching.
          * Translation cache files are stored with this configuration.
@@ -231,7 +263,7 @@ return [
              * MySQL on MAMP uses port 8889, MAMP users will want to uncomment
              * the following line and set the port accordingly
              */
-            'port' => '/var/run/mysql-twinavi_feed/mysqld.sock',
+            'port' => '/var/run/mysql-cakephp/mysqld.sock',
             'username' => '<%= @login %>',
             'password' => '<%= @password %>',
             'database' => '<%= @database %>',

@@ -6,7 +6,7 @@ end
 
 mysql_service node[:belongsto][:app_name] do
   port '3306'
-  version '5.6'
+  version '5.7'
   initial_root_password node[:belongsto][:db_password_root]
   action [:create, :start]
 end

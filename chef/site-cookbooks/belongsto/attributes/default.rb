@@ -1,9 +1,9 @@
 default[:belongsto][:app_name]     = 'cakephp'
 
-default[:belongsto][:production]   = 'belongsto.com'
-default[:belongsto][:development]  = 'dev.belongsto.com'
-default[:belongsto][:personal]     = 'personal.belongsto.com'
-default[:belongsto][:virtualbox]   = 'virtualbox.belongsto.com'
+default[:belongsto][:production]   = 'gluons.link'
+default[:belongsto][:development]  = 'dev.gluons.link'
+default[:belongsto][:personal]     = 'personal.gluons.link'
+default[:belongsto][:virtualbox]   = 'virtualbox.gluons.link'
 default[:belongsto][:server_name]  = default[:belongsto][node.chef_environment]
 
 default[:belongsto][:www_root]     = "/var/www"
@@ -69,8 +69,6 @@ default['php']['ext_conf_dir']  = '/etc/php/7.1/apache2/conf.d'
 default['php']['src_deps']         = %w(libbz2-dev libc-client2007e-dev libcurl4-gnutls-dev libfreetype6-dev libgmp3-dev libjpeg62-dev libkrb5-dev libmcrypt-dev libpng12-dev libssl-dev pkg-config)
 
 default['php']['packages'] = %w(php7.1 libapache2-mod-php7.1 php7.1-cli php7.1-common php7.1-mbstring php7.1-gd php7.1-intl php7.1-xml php7.1-mcrypt php7.1-zip php-pear)
-# default['php']['packages'] = ['php7.1', 'libapache2-mod-php7.1', 'php7.1-cli', 'php7.1-common', 'php7.1-mbstring', 'php7.1-gd',
-#                               'php7.1-intl', 'php7.1-xml', 'php7.1-mysql', 'php7.1-mcrypt', 'php7.1-zip', 'php-pear']
 default['php']['mysql']['package'] = 'php7.1-mysql'
 default['php']['curl']['package']  = 'php7.1-curl'
 
