@@ -1,3 +1,7 @@
+apt_repository 'ondrej-php' do
+  uri        'ppa:ondrej/php'
+end
+
 include_recipe "php"
 include_recipe 'php::module_mysql'
 include_recipe 'php::module_curl'

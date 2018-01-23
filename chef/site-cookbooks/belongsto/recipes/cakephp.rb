@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-# install php intl extension as cakephp 3.x requires
-execute "install_intl_extension" do
-  command "sudo apt-get install php5-intl"
-end
-
 # disable apache event mpm mode
 execute "disable_mpm_event" do
   command "a2dismod mpm_event"
