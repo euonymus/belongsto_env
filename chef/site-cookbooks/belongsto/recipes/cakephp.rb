@@ -83,10 +83,16 @@ end
 execute "init_subject_search" do
   command "mysql -S /var/run/mysql-" + node[:belongsto][:app_name] + "/mysqld.sock -u" + node[:belongsto][:db_user] + " -p" + node[:belongsto][:db_password] + " " + node[:belongsto][:db_name] + " -e'ALTER TABLE `subject_searches` MODIFY `search_words` TEXT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci` NOT NULL;'"
 end
+execute "init_ja_subject_search" do
+  command "mysql -S /var/run/mysql-" + node[:belongsto][:app_name] + "/mysqld.sock -u" + node[:belongsto][:db_user] + " -p" + node[:belongsto][:db_password] + " " + node[:belongsto][:db_name] + " -e'ALTER TABLE `ja_subject_searches` MODIFY `search_words` TEXT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci` NOT NULL;'"
+end
 
 # make it myisam
 execute "init_subject_search" do
   command "mysql -S /var/run/mysql-" + node[:belongsto][:app_name] + "/mysqld.sock -u" + node[:belongsto][:db_user] + " -p" + node[:belongsto][:db_password] + " " + node[:belongsto][:db_name] + " -e'ALTER TABLE `subject_searches` ENGINE = MyISAM;'"
+end
+execute "init_ja_subject_search" do
+  command "mysql -S /var/run/mysql-" + node[:belongsto][:app_name] + "/mysqld.sock -u" + node[:belongsto][:db_user] + " -p" + node[:belongsto][:db_password] + " " + node[:belongsto][:db_name] + " -e'ALTER TABLE `ja_subject_searches` ENGINE = MyISAM;'"
 end
 
 
