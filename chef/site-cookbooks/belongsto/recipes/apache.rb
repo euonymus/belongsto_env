@@ -4,12 +4,12 @@ if node['apache']['mpm'] != 'prefork'
   Chef::Log.warn('See http://php.net/manual/en/faq.installation.php#faq.installation.apache2')
   Chef::Log.warn("Currently the apache2 cookbook is configured to use the '#{node['apache']['mpm']}' MPM")
 end
-file "#{node['apache']['dir']}/mods-available/php7.1.conf" do
-  content '# conf is under mods-available/php7.conf - apache2 cookbook\n'
-end
-file "#{node['apache']['dir']}/mods-available/php7.1.load" do
-  content '# conf is under mods-available/php7.load - apache2 cookbook\n'
-end
+# file "#{node['apache']['dir']}/mods-available/php7.1.conf" do
+#   content '# conf is under mods-available/php7.conf - apache2 cookbook\n'
+# end
+# file "#{node['apache']['dir']}/mods-available/php7.1.load" do
+#   content '# conf is under mods-available/php7.load - apache2 cookbook\n'
+# end
 apache_conf 'php7' do
   cookbook 'apache2'
   source 'default/mods/php.conf.erb'
