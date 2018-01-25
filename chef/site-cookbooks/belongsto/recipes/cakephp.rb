@@ -55,6 +55,7 @@ template node[:belongsto][:cake_source] + '/config/app.php' do
   group "www-data"
   mode "755"
   variables({
+     :app_name      => node[:belongsto][:app_name],
      :login         => node[:belongsto][:db_user],
      :database      => node[:belongsto][:db_name],
      :password      => node[:belongsto][:db_password],

@@ -34,7 +34,7 @@ Vagrant.configure("2") do |config|
     vb.ssh_key_name = SSH_KEYNAME
     vb.image = 'ubuntu-16-04-x64'
     vb.region = 'sgp1'
-    vb.size = '512MB'
+    vb.size = 's-1vcpu-1gb'
   end
   ENV['VAGRANT_DEFAULT_PROVIDER'] = 'digital_ocean'
 
