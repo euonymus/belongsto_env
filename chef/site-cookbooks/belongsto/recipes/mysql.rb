@@ -21,6 +21,11 @@ mysql_config node[:belongsto][:app_name] do
   action :create
 end
 
+# restart mysql. I thought above "mysql_config" notifies setting restart mysql, but seems not. somehow this below needed.
+execute "restart_mysql" do
+  command "sudo service mysql-" + node[:belongsto][:app_name] + " restart"
+end
+
 
 # Since database cookbook(4.0.7) requires manual install for mysql2_chef_gem
 mysql2_chef_gem 'default' do
