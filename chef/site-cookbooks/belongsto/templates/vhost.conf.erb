@@ -2,6 +2,8 @@ ServerName <%= @params[:server_name] %>
 
 <VirtualHost *:80>
   DocumentRoot <%= @params[:docroot] %>
+  ServerName <%= @params[:server_name] %>
+  ServerAlias ja.<%= @params[:server_name] %>
 
   RewriteEngine On
 
